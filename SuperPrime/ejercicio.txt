@@ -1,0 +1,32 @@
+# Análisis de los números primos en ambas direcciones de lectura (Super Primos).
+Queremos encontrar los números enteros que, perteneciendo a un intervalo de números naturales definido por 
+[lowerBound, upperBound], cumplen que son primos y que cuando son leidos de derecha a izquierda,
+ también son número primo diferente.
+
+Por ejemplo, el número 13 es un número primo en ambas direcciones de lectura, 
+porque el 13 es un número primo y el 31 también es un número primo diferente.
+
+## Diseño
+Para ello, necesitamos crear una función, analizeSuperPrime(...), que recibe 2 parámetros
+1. Cota inferior del intervalo
+2. Cota superior del intervalo 
+
+La función genera un array con los datos detallados a continuación:
+1. la cantidad de números que satisfacen la restricción presentada anteriormente
+2. la suma total de todos los números encontrados
+
+## Ejemplo
+analizeSuperPrime(13, 31) -----> [3, 61]
+
+ - Hay 3 números encontrados: 13, 17 y 31
+
+ - 61 es la suma de todos los números encontrados: 13 + 17 + 31 = 61
+
+## Casos
+analizeSuperPrime(1, 31) -----> [3, 61] 
+
+analizeSuperPrime(2, 100) -----> [8, 418]
+
+analizeSuperPrime(9900, 10000) -----> [4, 39762]
+
+analizeSuperPrime(501, 599) -----> [0, 0]
